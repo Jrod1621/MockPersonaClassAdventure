@@ -2,7 +2,7 @@
 
 An introduction to your project:
 
--My project is a simulation of all Persona 3 player's favorite part of the game, the slice of life. Persona is single player RPG and they have a unique stat section. You gain stats by talking and making friends, scoring correctly on tests, and plundering the dungeon. This project looks to simulate the main character's school life, always having to choose between keeping yourself awake throghout class to gain "academics," stat or letting yourself fall asleep to gain "courage," stat. 
+-My project is a simulation of all Persona 3 player's favorite part of the game, the slice of life. Persona is a single player RPG and they have a unique stat section. You gain stats by talking and making friends, scoring correctly on tests, and plundering the dungeon. This project looks to simulate the main character's school life, always having to choose between keeping yourself awake throghout class to gain "academics," stat or letting yourself fall asleep to gain "courage," stat. 
 
 A discussion of the technical framework you used or developed
 
