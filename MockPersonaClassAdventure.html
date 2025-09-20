@@ -9,11 +9,39 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Mock Persona Class Adventure.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Mock Persona Class Adventure" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="B3BDDBFE-953A-46A6-917A-49C30871BEE9" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
+<tw-storydata name="Mock Persona Class Adventure" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="B3BDDBFE-953A-46A6-917A-49C30871BEE9" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*these 3 blocks lift the intro img, text, and choices*/
+.lift {
+  position: relative;
+  top: -120px; 
+  gap: 400px;
+  margin-top: -80px;
+  margin-left: 140px
+  
+}
+
+.lift img {
+  display: block;
+  margin: 10px auto 0; 
+  max-width: 85vw;
+  height: auto;
+  top: -20px;
+}
+
+tw-passage .a { position: relative; top: -235px !important; margin-left:110px; font-size:1.25em }
+
+tw-passage {
   color: #fff;
   line-height: 1.6;
   min-height: 100vh;
 }
+.lift1 img { 
+  display: block;
+  margin: 10px auto 0; 
+  max-width: 55vw;
+  height: 25vw;
+  top: 15px;
+	left:62px}
+
 
 tw-hook[name="ui"]{
   position: relative;
@@ -28,74 +56,200 @@ tw-hook[name="ui"]{
   box-shadow: 0 12px 34px rgba(0,0,0,.45);
   backdrop-filter: blur(2px);
 }
-
 tw-link { color: #9cc7ff; text-decoration: none; font-weight: 700; }
 tw-link:hover { text-decoration: underline; }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="800,325" size="100,100">(set: $day to 1)
+
+.inline-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/*image AND question scaler for day1*/
+.inline-box img {
+  transform: scale(1.3);  
+  margin-top: 180px;        
+  margin-left: -90px;     
+  transform-origin: top left; 
+}
+/*answer choice size up*/
+.choice-links {
+  margin-top: 200px
+  font-size: 1.45em;
+  line-height: 1.6em;
+}
+.choice-links1 {
+  margin-top: 140px
+  font-size: 1.6em;
+  line-height: 1.6em;
+  margin-left:-100
+}
+  tw-passage .lift2 img {
+  position: relative;
+  top: -375px;             
+  left: 20px;             
+  transform: scale(.37);
+}  
+tw-passage tw-hook[name="choices2"] {
+  position: relative;
+  top: -800px;           
+}
+
+tw-passage tw-hook[name="choices2"] > ul {
+  margin-top: -100px;
+}
+.choice-links2{
+  position: relative;
+  top:-1000px
+}
+.choice-links3{
+  position: relative;
+  top:-600px}
+}  
+
+tw-passage .choice-links {
+  position: relative;
+  top: -350px; 
+}
+tw-passage .lift3 img {
+  position: relative;
+  top: -200px;             
+  left: 180px;             
+  transform: scale(.9);
+}
+ tw-passage .inline-box3 {
+  position: relative;   
+  top: -200px;         
+  left: 20px;           
+}
+
+tw-passage tw-hook[name="choices3"] {
+  position: relative;
+  top: -200px;           
+}
+
+tw-passage tw-hook[name="choices3"] > ul {
+  margin-top: -40px;
+}
+
+tw-passage .inline-box2 {
+  position: relative;   
+  top: -190px;         
+  left: 20px;    
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="800,325" size="100,100">(set: $day to 1)
 (set: $academics to 0)
 (set: $courage to 0)
 (set: $answer to &quot;&quot;)
 
-It&#39;s another beautiful day at Gekkoukan High School. How are you feeling?
+&lt;div class=&quot;lift&quot;&gt;
+  It&#39;s another beautiful day at Gekkoukan High School. How are you feeling?
 
-[[Energized-&gt;Classroom]]
-[[Tired-&gt;Classroom]]
+  &lt;img src=&quot;https://static.wikia.nocookie.net/persona-records/images/7/79/Gekkoukan_High.jpg/revision/latest?cb=20210111115423&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;a&quot;&gt;
+* [[Energized-&gt;Classroom]]
+* [[Tired-&gt;Classroom]]
+&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="2" name="Classroom" tags="" position="800,450" size="100,100">You arrive at class 2-F once again, the teacher seems as energetic as ever and immediately begins the lecture. What do you want to do?
 
 [[Pay attention-&gt;Trivia]]
 [[Sleep through class-&gt;Sleep]]
 [[Check your stats-&gt;Stats]]
-</tw-passagedata><tw-passagedata pid="3" name="Trivia" tags="" position="450,600" size="100,100">{(if: $day is 1)[
-Mr. Ono asks you: &quot;The places where people dumped their waste in the Jomon period—what are they called nowadays?&quot;
+</tw-passagedata><tw-passagedata pid="3" name="Trivia" tags="" position="450,600" size="100,100">(if:$day is 1)[
+&lt;div class=&quot;inline-box&quot;&gt;
+  &lt;span&gt;
+  Mr. Ono asks you: &quot;The places where people dumped their waste in the Jomon period—what are they called nowadays?&quot;
+  &lt;/span&gt;
+  &lt;img src=&quot;https://github.com/Jrod1621/MockPersonaClassAdventure/blob/main/Persona3Classroom/ono1.jpg?raw=true&quot;&gt;
+&lt;/div&gt;
 
-* (link: &quot;Middens&quot;)[ (set: $answer to &quot;Middens&quot;) (goto: &quot;Answers&quot;) ]
-* (link: &quot;Boneyards&quot;)[ (set: $answer to &quot;Boneyards&quot;) (goto: &quot;Answers&quot;) ]
-* (link: &quot;Hovels&quot;)[ (set: $answer to &quot;Hovels&quot;) (goto: &quot;Answers&quot;) ]
-]}
+&lt;div class=&quot;choice-links&quot;&gt;
+* (link: &quot;Middens&quot;)[ (set: $answer to &quot;Middens&quot;) (goto: &quot;Answers&quot;) ]  
+* (link: &quot;Boneyards&quot;)[ (set: $answer to &quot;Boneyards&quot;) (goto: &quot;Answers&quot;) ]  
+* (link: &quot;Hovels&quot;)[ (set: $answer to &quot;Hovels&quot;) (goto: &quot;Answers&quot;) ]  
+&lt;/div&gt;
+]
 
 {(if: $day is 2)[
-Mrs. Terauchi asks you: &quot;What’s the other name for &#39;May sickness&#39; — the more casual one?&quot;
+&lt;div class=&quot;inline-box&quot;&gt;
+  &lt;span&gt;
+  Mrs. Terauchi asks you: &quot;What’s the other name for &#39;May sickness&#39; — the more casual one?&quot;
+  &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;lift1&quot;&gt;
+  &lt;img src=&quot;https://github.com/Jrod1621/MockPersonaClassAdventure/blob/main/Persona3Classroom/terauchi.jpg?raw=true&quot;&gt;
+&lt;/div&gt;
 
+&lt;div class=&quot;choice-links1&quot;&gt;
 * (link: &quot;May Days&quot;)[ (set: $answer to &quot;May Days&quot;) (goto: &quot;Answers&quot;) ]
 * (link: &quot;May Blues&quot;)[ (set: $answer to &quot;May Blues&quot;) (goto: &quot;Answers&quot;) ]
 * (link: &quot;Moody Blues&quot;)[ (set: $answer to &quot;Moody Blues&quot;) (goto: &quot;Answers&quot;) ]
+&lt;/div&gt;
 ]}
 
 {(if: $day is 3)[
+&lt;div class=&quot;inline-box&quot;&gt;
+&lt;span&gt;
 Mr. Takenozuka asks you: &quot;Leon Foucault demonstrated the Earth&#39;s rotation. Which tool did he use?&quot;
-
+&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;lift1&quot;&gt;
+  &lt;img src=&quot;https://github.com/Jrod1621/MockPersonaClassAdventure/blob/main/Persona3Classroom/take.jpg?raw=true&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;choice-links1&quot;&gt;
 * (link: &quot;The Hourglass&quot;)[ (set: $answer to &quot;The Hourglass&quot;) (goto: &quot;Answers&quot;) ]
 * (link: &quot;The Planisphere&quot;)[ (set: $answer to &quot;The Planisphere&quot;) (goto: &quot;Answers&quot;) ]
 * (link: &quot;The Pendulum&quot;)[ (set: $answer to &quot;The Pendulum&quot;) (goto: &quot;Answers&quot;) ]
+&lt;/div&gt;
 ]}
 
 {(if: $day is 4)[
-Ms. Ounishi asks you: &quot;What do you call the device that helps generate electric power for the train?&quot;
+&lt;div class=&quot;inline-box2&quot;&gt;
+&lt;span&gt;Ms. Ounishi asks you: &quot;What do you call the device that helps generate electric power for the train?&quot;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;lift2&quot;&gt;
+  &lt;img src=&quot;https://github.com/Jrod1621/MockPersonaClassAdventure/blob/main/Persona3Classroom/ounishi.jpg?raw=true&quot;&gt;
+&lt;/div&gt;
 
+&lt;div class=&quot;choice-links2&quot;&gt;
 * (link: &quot;A Pantograph&quot;)[ (set: $answer to &quot;A Pantograph&quot;) (goto: &quot;Answers&quot;) ]
 * (link: &quot;A Piston&quot;)[ (set: $answer to &quot;A Piston&quot;) (goto: &quot;Answers&quot;) ]
 * (link: &quot;A Master Controller&quot;)[ (set: $answer to &quot;A Master Controller&quot;) (goto: &quot;Answers&quot;) ]
+&lt;/div&gt;
 ]}
 
-{(if: $day is 5)[
-Mr. Ono asks you: &quot;During which historical period were middens most commonly used?&quot;
+(if: $day is 5)[
+  &lt;div class=&quot;inline-box3&quot;&gt;
+    &lt;span&gt;Mr. Ono asks you: &quot;During which historical period were middens most commonly used?&quot;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;lift3&quot;&gt;
+    &lt;img src=&quot;https://github.com/Jrod1621/MockPersonaClassAdventure/blob/main/Persona3Classroom/ono2.jpg?raw=true&quot;&gt;
+  &lt;/div&gt;
 
-* (link: &quot;Asuka&quot;)[ (set: $answer to &quot;Asuka&quot;) (goto: &quot;Answers&quot;) ]
-* (link: &quot;Yayoi&quot;)[ (set: $answer to &quot;Yayoi&quot;) (goto: &quot;Answers&quot;) ]
-* (link: &quot;Jomon&quot;)[ (set: $answer to &quot;Jomon&quot;) (goto: &quot;Answers&quot;) ]
-]}
+  &lt;div class=&quot;choice-links3&quot;&gt;
+    * (link: &quot;Asuka&quot;)[ (set: $answer to &quot;Asuka&quot;)(goto: &quot;Answers&quot;) ]
+    * (link: &quot;Yayoi&quot;)[ (set: $answer to &quot;Yayoi&quot;)(goto: &quot;Answers&quot;) ]
+    * (link: &quot;Jomon&quot;)[ (set: $answer to &quot;Jomon&quot;)(goto: &quot;Answers&quot;) ]
+  &lt;/div&gt;
+]
+
+
 </tw-passagedata><tw-passagedata pid="4" name="Sleep" tags="" position="775,700" size="100,100">You drift off during the lecture…
 You feel more rested, but you might have missed something important.
 
 (set: $courage to $courage + 1)
 (set: $day to $day + 1)
+(set: _maxDays to 5)
 
-(if: $day &gt; (length: $qa))[
+(if: $day &gt; _maxDays)[
   [[Finish the week-&gt;Ending]]
 ]
 (else:)[
   [[Go to the next day-&gt;Classroom]]
 ]
+
+
+
 </tw-passagedata><tw-passagedata pid="5" name="Stats" tags="" position="975,750" size="100,100">Your current stats are:
 - Academics: $academics
 - Courage: $courage
